@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    {head}
+    <body>
+        {navbar}
+        <div class="content">
+            <h1>Table of Contents</h1>
+            <ol>
+                <li><a href="#list-of-commands">List of Commands</a></li>
+                <li><a href="#watching-changes">Watching Changes</a></li>
+                <li><a href="#managing-streambot">Managing StreamBotMH (for maintainers)</a></li>
+                <li>
+                    <ol>
+                        <li><a href="#restarting-streambot">Restarting StreamBotMH</a></li>
+                        <li><a href="#config-changes">Configuration Changes</a></li>
+                        <li><a href="#update-website">Website Updates</a></li>
+                    </ol>
+                </li>
+            </ol>
+            <h1 id="list-of-commands">List of Commands</h1>
+            <div style="overflow-x:auto;">
+                <table>
+                    <caption>Command Documentation table</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Commands</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>!watch</td>
+                            <td>Create a watch rule.</td>
+                            <td><code>!watch mywiki all</code><br><code>!watch mywiki page MyPage</code></td>
+                        </tr>
+                        <tr>
+                            <td>!ignore</td>
+                            <td>Create an ignore rule.</td>
+                            <td>!ignore mywiki page MyPage</td>
+                        </tr>
+                        <tr>
+                            <td>!unwatch</td>
+                            <td>Remove a watch rule.</td>
+                            <td>!unwatch mywiki page MyPage</td>
+                        </tr>
+                        <tr>
+                            <td>!unignore</td>
+                            <td>Remove an ignore rule.</td>
+                            <td>!unignore mywiki user Sample</td>
+                        </tr>
+                        <tr>
+                            <td>!list</td>
+                            <td>List all rules.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                           <td>!join</td>
+                           <td>Have the bot join a channel. Bot administrators only.</td>
+                           <td>!join #channel</td>
+                        </tr>
+                        <tr>
+                           <td>!part</td>
+                           <td>Have the bot leave the current channel. Bot administrators only.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!quit</td>
+                           <td>Tell the bot to shut down. Bot administrators only.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!list</td>
+                           <td>List all the watch and ignore rules.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!help</td>
+                           <td>List the commands.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!info</td>
+                           <td>Show bot info.</td>
+                           <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h1 id="managing-streambot">Managing StreamBotMH (for maintainers)</h1>
+            <h2 id="restarting-streambot">Restarting StreamBotMH</h2>
+            To restart the bot
+            <h2 id="config-changes">Configuration Changes</h2>
+            1. ssh into the server<br/>
+            <h2 id="update-website">Website Updates</h2>
+            For most changes, simply merging will deploy within ~20 mins.
+            If you can not use auto-deploy or it is down, merge your change on GitHub. Next ssh to the server.
+            <pre>ssh (your username)@100.node4.net.fosshost.org</pre>
+            Next run deploy.py. This will pull in any new changes to the repository on GitHub.
+            <pre>(your username)@100:~$ python3 /var/www/deploy.py </pre>
+            Go to bots.miraheze.wiki and check to make sure your changes are present.
+        </div>
+    {footer}
+    </body>
+</html>
