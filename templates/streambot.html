@@ -87,6 +87,13 @@
                     </tbody>
                 </table>
             </div>
+            <hi id="watching-changes">Watching Changes</h1>
+            Watching changes is managed using watch and ignore rules. Rules are created using the format: !watch/!ignore (wiki) (type) (pattern).
+            1. Watch/Ignore: the type of rule you are creating.<br/>
+            2. Wiki: which wiki the rule applies to.<br/>
+            3. Type: Choose between all (the entire wiki), page (edits to a specific page), user (edits by a specific user), log (entries on a given log), summary ()<br/>
+            4. Pattern: the name of the page/log/user/etc the rule applies to.<br/>
+            To remove a rule, use !unwatch or !unignore and enter the same syntax used to create the rule.
             <h1 id="managing-streambot">Managing StreamBotMH (for maintainers)</h1>
             <h2 id="restarting-streambot">Restarting StreamBotMH</h2>
             To restart the bot
