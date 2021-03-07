@@ -13,7 +13,6 @@
                     <ol>
                         <li><a href="#restarting-streambot">Restarting StreamBotMH</a></li>
                         <li><a href="#channel-add-remove">Adding and removing channels</a></li>
-                        <li><a href="#update-website">Website Updates</a></li>
                     </ol>
                 </li>
             </ol>
@@ -102,13 +101,6 @@
             Only bot admins can add or remove the bot from a channel.
             To add a channel, say <pre>!join (channelname)</pre> in any channel the bot is already in.
             To remove a channel, go to the channel and say <pre>!part</pre>.
-            <h2 id="update-website">Website Updates</h2>
-            For most changes, simply merging will deploy within ~20 mins.
-            If you can not use auto-deploy or it is down, merge your change on GitHub. Next ssh to the server.
-            <pre>ssh (your username)@100.node4.net.fosshost.org</pre>
-            Next run deploy.py. This will pull in any new changes to the repository on GitHub.
-            <pre>(your username)@100:~$ python3 /var/www/deploy.py </pre>
-            Go to bots.miraheze.wiki and check to make sure your changes are present.
         </div>
     {footer}
     </body>
