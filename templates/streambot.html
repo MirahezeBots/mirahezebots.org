@@ -12,7 +12,7 @@
                 <li>
                     <ol>
                         <li><a href="#restarting-streambot">Restarting StreamBotMH</a></li>
-                        <li><a href="#config-changes">Configuration Changes</a></li>
+                        <li><a href="#channel-add-remove">Adding and removing channels</a></li>
                         <li><a href="#update-website">Website Updates</a></li>
                     </ol>
                 </li>
@@ -91,14 +91,17 @@
             Watching changes is managed using watch and ignore rules. Rules are created using the format: !watch/!ignore (wiki) (type) (pattern).
             1. Watch/Ignore: the type of rule you are creating.<br/>
             2. Wiki: which wiki the rule applies to.<br/>
-            3. Type: Choose between all (the entire wiki), page (edits to a specific page), user (edits by a specific user), log (entries on a given log), summary ()<br/>
+            3. Type: Choose between all (the entire wiki), page (edits to a specific page), user (edits by a specific user), log (entries on a given log)<br/>
             4. Pattern: the name of the page/log/user/etc the rule applies to.<br/>
             To remove a rule, use !unwatch or !unignore and enter the same syntax used to create the rule.
             <h1 id="managing-streambot">Managing StreamBotMH (for maintainers)</h1>
             <h2 id="restarting-streambot">Restarting StreamBotMH</h2>
-            To restart the bot
-            <h2 id="config-changes">Configuration Changes</h2>
-            1. ssh into the server<br/>
+            To restart the bot run the following on bots1:
+            <pre>sudo service streambot restart</pre>
+            <h2 id="channel-add-remove">Adding and removing channels</h2>
+            Only bot admins can add or remove the bot from a channel.
+            To add a channel, say <pre>!join (channelname)</pre> in any channel the bot is already in.
+            To remove a channel, go to the channel and say <pre>!part</pre>.
             <h2 id="update-website">Website Updates</h2>
             For most changes, simply merging will deploy within ~20 mins.
             If you can not use auto-deploy or it is down, merge your change on GitHub. Next ssh to the server.
