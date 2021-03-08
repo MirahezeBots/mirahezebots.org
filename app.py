@@ -14,6 +14,7 @@ def display_content(path, config):
             navbarr = navbar.read()
             index = 'href="/"'
             docs = 'href="documentation"'
+            streambot = 'href="streambot"'
             contribs = 'href="contribs"'
             about = 'href="about"'
             sourcecode = 'href="https://bots.miraheze.org/wiki/Source_Code"'
@@ -28,6 +29,7 @@ def display_content(path, config):
             navbarr = navbarr.format(
                 indexlink=index,
                 documentationlink=docs,
+                streambotlink=streambot,
                 contribslink=contribs,
                 aboutlink=about,
                 sourcecodelink=sourcecode,

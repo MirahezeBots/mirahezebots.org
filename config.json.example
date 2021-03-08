@@ -2,6 +2,7 @@
    "templatedpages":{
       "about":"templates/about.html",
       "contribs":"templates/contribs.html",
+      "streambot":"templates/streambot.html",
       "documentation":"templates/documentation.html",
       "index":"templates/index.html",
       "privacy":"templates/privacy.html",
