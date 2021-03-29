@@ -1033,7 +1033,7 @@
             <h1 id="managing-mhbots">Managing MirahezeBot (for maintainers)</h1>
             <h2 id="restarting-mhbots">Restarting MirahezeBot</h2>
             To restart the bot first ssh to 100.node4.net.fosshost.org.
-            <pre>ssh (your username)@100</pre>
+            <pre>ssh (your username)@100.node4.net.fosshost.org</pre>
             Run the following command:
             <pre>(your username)@100:~$ sudo service [mirahezebotprod|mirahezebottest] [start|stop|restart]</pre>
             <h2 id="improving-modules">Improving Modules</h2>
@@ -1052,11 +1052,11 @@
 (your username)@100:~/.sopel$ nano *-chat.freenode.net.reminders.db</pre>
             Finally, follow <a href="#restarting-mhbots">the guide to restart the bot</a> above.
             <h2 id="update-website">Website Updates</h2>
-            For most changes, simply merging will deploy within ~20 mins.
+            For most changes, simply merging will deploy within ~10 mins.
             If you can not use auto-deploy or it is down, merge your change on GitHub. Next ssh to the server.
             <pre>ssh (your username)@100.node4.net.fosshost.org</pre>
-            Next run deploy.py. This will pull in any new changes to the repository on GitHub.
-            <pre>(your username)@100:~$ python3 /var/www/deploy.py </pre>
+            Next run puppet. This will pull in any new changes to the repository on GitHub.
+            <pre>(your username)@100:~$ puppet-run</pre>
             Go to mirahezebots.org and check to make sure your changes are present.
         </div>
     {footer}
