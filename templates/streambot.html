@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    {head}
+    <body>
+        {navbar}
+        <div class="content">
+            <h1>Table of Contents</h1>
+            <ol>
+                <li><a href="#list-of-commands">List of Commands</a></li>
+                <li><a href="#watching-changes">Watching Changes</a></li>
+                <li><a href="#managing-streambot">Managing StreamBotMH (for maintainers)</a></li>
+                <li>
+                    <ol>
+                        <li><a href="#restarting-streambot">Restarting StreamBotMH</a></li>
+                        <li><a href="#channel-add-remove">Adding and removing channels</a></li>
+                    </ol>
+                </li>
+            </ol>
+            <h1 id="list-of-commands">List of Commands</h1>
+            <div style="overflow-x:auto;">
+                <table>
+                    <caption>Command Documentation table</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Commands</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>!watch</td>
+                            <td>Create a watch rule.</td>
+                            <td><code>!watch mywiki all</code><br><code>!watch mywiki page MyPage</code></td>
+                        </tr>
+                        <tr>
+                            <td>!ignore</td>
+                            <td>Create an ignore rule.</td>
+                            <td>!ignore mywiki page MyPage</td>
+                        </tr>
+                        <tr>
+                            <td>!unwatch</td>
+                            <td>Remove a watch rule.</td>
+                            <td>!unwatch mywiki page MyPage</td>
+                        </tr>
+                        <tr>
+                            <td>!unignore</td>
+                            <td>Remove an ignore rule.</td>
+                            <td>!unignore mywiki user Sample</td>
+                        </tr>
+                        <tr>
+                            <td>!list</td>
+                            <td>List all rules.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                           <td>!join</td>
+                           <td>Have the bot join a channel. Bot administrators only.</td>
+                           <td>!join #channel</td>
+                        </tr>
+                        <tr>
+                           <td>!part</td>
+                           <td>Have the bot leave the current channel. Bot administrators only.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!quit</td>
+                           <td>Tell the bot to shut down. Bot administrators only.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!list</td>
+                           <td>List all the watch and ignore rules.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!help</td>
+                           <td>List the commands.</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>!info</td>
+                           <td>Show bot info.</td>
+                           <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hi id="watching-changes">Watching Changes</h1>
+            Watching changes is managed using watch and ignore rules. Rules are created using the format: !watch/!ignore (wiki) (type) (pattern).
+            1. Watch/Ignore: the type of rule you are creating.<br/>
+            2. Wiki: which wiki the rule applies to.<br/>
+            3. Type: Choose between all (the entire wiki), page (edits to a specific page), user (edits by a specific user), log (entries on a given log)<br/>
+            4. Pattern: the name of the page/log/user/etc the rule applies to.<br/>
+            To remove a rule, use !unwatch or !unignore and enter the same syntax used to create the rule.
+            <h1 id="managing-streambot">Managing StreamBotMH (for maintainers)</h1>
+            <h2 id="restarting-streambot">Restarting StreamBotMH</h2>
+            To restart the bot run the following on bots1:
+            <pre>sudo service streambot restart</pre>
+            <h2 id="channel-add-remove">Adding and removing channels</h2>
+            Only bot admins can add or remove the bot from a channel.
+            To add a channel, say <pre>!join (channelname)</pre> in any channel the bot is already in.
+            To remove a channel, go to the channel and say <pre>!part</pre>.
+        </div>
+    {footer}
+    </body>
+</html>
