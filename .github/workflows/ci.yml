@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Node 14
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: '14'
       - name: Install packages
