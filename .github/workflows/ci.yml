@@ -43,8 +43,7 @@ jobs:
           pytest .
           bandit . -r -s=B101
           pip check
-          npm run stylelint
-          npm run htmllint
+          npm test
       - name: Run pip freeze and pipdeptree
         run: |
           pip freeze

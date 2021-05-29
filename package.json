@@ -1,14 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "test": "npm run stylelint && npm run htmllint",
-    "stylelint": "stylelint 'assets/*.css'",
-    "htmllint": "htmllint 'templates/*.html'"
+    "test": "npx prettier --check ."
   },
   "devDependencies": {
-    "htmllint": "0.7.3",
-    "htmllint-cli": "^0.0.7",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
+    "prettier": "2.3.0"
   }
 }
